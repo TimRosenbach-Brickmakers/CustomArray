@@ -377,6 +377,16 @@
             "related": ".xml"
           }
         }
+      },
+      "CustomArrayProgram/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CustomArrayProgram.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomArrayProgram.dll": {}
+        }
       }
     }
   },
@@ -970,10 +980,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "CustomArrayProgram/1.0.0": {
+      "type": "project",
+      "path": "../CustomArrayProgram/CustomArrayProgram.csproj",
+      "msbuildProject": "../CustomArrayProgram/CustomArrayProgram.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "CustomArrayProgram >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 3.14.0",
       "NUnit.Analyzers >= 3.9.0",
@@ -982,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/tim.rosenbach/.nuget/packages/": {}
+    "/Users/felix.langstengel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Library/Repos/CustomArray/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
+      "projectUniqueName": "/Library/Repos/TimsArrayProject/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
       "projectName": "CustomArrayUnitTest",
-      "projectPath": "/Library/Repos/CustomArray/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
-      "packagesPath": "/Users/tim.rosenbach/.nuget/packages/",
-      "outputPath": "/Library/Repos/CustomArray/CustomArrayUnitTest/obj/",
+      "projectPath": "/Library/Repos/TimsArrayProject/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
+      "packagesPath": "/Users/felix.langstengel/.nuget/packages/",
+      "outputPath": "/Library/Repos/TimsArrayProject/CustomArrayUnitTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tim.rosenbach/.nuget/NuGet/NuGet.Config"
+        "/Users/felix.langstengel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1005,7 +1021,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj": {
+              "projectPath": "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

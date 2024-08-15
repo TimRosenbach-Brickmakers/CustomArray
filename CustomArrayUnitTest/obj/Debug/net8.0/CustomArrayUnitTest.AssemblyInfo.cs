@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomArrayUnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97389e753bee0151644aa12bafe461850eaa6875")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomArrayUnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomArrayUnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
