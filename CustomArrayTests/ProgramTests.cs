@@ -5,14 +5,14 @@ namespace CustomArrayTests;
 public class ProgramTests
 {
     private MyArrayList<int> _arraylist = null!;
-    
+
     [SetUp]
     public void Setup()
     {
         _arraylist = new MyArrayList<int>();
     }
 
-    class Get : ProgramTests
+    public class Get : ProgramTests
     {
         [Test]
         public void TestGetFunction()
@@ -40,7 +40,7 @@ public class ProgramTests
         }
     }
 
-    class Add : ProgramTests
+    public class Add : ProgramTests
     {
         [Test]
         public void TestIfAddAddsAValue()
@@ -68,7 +68,7 @@ public class ProgramTests
         }
     }
 
-    class Remove : ProgramTests
+    public class Remove : ProgramTests
     {
         [Test]
         public void TestRemoveOfOneNode()
@@ -108,7 +108,7 @@ public class ProgramTests
         }
     }
 
-    class FindIndex : ProgramTests
+    public class FindIndex : ProgramTests
     {
         [Test]
         public void ValueNotFound()
@@ -132,7 +132,7 @@ public class ProgramTests
             _arraylist.Add(33);
             Assert.That(_arraylist.FindIndex(33), Is.EqualTo(0));
         }
-        
+
         [Test]
         public void ValueFound2()
         {
@@ -150,7 +150,7 @@ public class ProgramTests
         }
     }
 
-    class RemoveRange : ProgramTests
+    public class RemoveRange : ProgramTests
     {
         [Test]
         public void TestIfListIsNull()
@@ -165,10 +165,10 @@ public class ProgramTests
             _arraylist.Add(2);
             _arraylist.Add(3);
             _arraylist.Add(4);
-            
+
             Assert.Throws<IndexOutOfRangeException>(() => _arraylist.RemoveRange([2, 5]));
         }
-        
+
         [Test]
         public void TestRemoveFirstThreeNumbers()
         {
@@ -180,7 +180,7 @@ public class ProgramTests
             _arraylist.Add(6);
 
             _arraylist.RemoveRange([1,3]);
-            
+
             Assert.That(_arraylist.Get(0), Is.EqualTo(4));
         }
     }
