@@ -104,9 +104,27 @@ public class MyArrayList<T>
 
     public int FindIndex(int value)
     {
-        throw new NotImplementedException();
+        FindIndex(value, _entryNode);
+
     }
 
+    private int FindIndex(int value, Node node)
+    {
+        if (_entryNode == null)
+        {
+            return -1;
+        }
+        var currentNode = _entryNode;
+        var length = 0;
+        while (currentNode.NextNode != null)
+        {
+			if (EqualityComparer<T>.Default.Equals(node.NextNode.Value, value)) {
+                return length;
+			}        
+            currentNode = currentNode.NextNode;
+            length++;
+        }
+    }
 
     public void RemoveRange(int[] i)
     {
