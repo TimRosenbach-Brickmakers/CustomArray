@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj": {}
+    "/Library/Repos/CustomArray/CustomArrayProgram/CustomArrayProgram.csproj": {}
   },
   "projects": {
-    "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj": {
+    "/Library/Repos/CustomArray/CustomArrayProgram/CustomArrayProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj",
+        "projectUniqueName": "/Library/Repos/CustomArray/CustomArrayProgram/CustomArrayProgram.csproj",
         "projectName": "CustomArrayProgram",
-        "projectPath": "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj",
-        "packagesPath": "/Users/felix.langstengel/.nuget/packages/",
-        "outputPath": "/Library/Repos/TimsArrayProject/CustomArrayProgram/obj/",
+        "projectPath": "/Library/Repos/CustomArray/CustomArrayProgram/CustomArrayProgram.csproj",
+        "packagesPath": "/Users/tim.rosenbach/.nuget/packages/",
+        "outputPath": "/Library/Repos/CustomArray/CustomArrayProgram/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/felix.langstengel/.nuget/NuGet/NuGet.Config"
+          "/Users/tim.rosenbach/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

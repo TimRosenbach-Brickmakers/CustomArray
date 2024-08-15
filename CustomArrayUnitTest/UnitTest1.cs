@@ -153,4 +153,41 @@ public class Tests
             Assert.That(_arraylist.FindIndex(85), Is.EqualTo(2));
         }
     }
+
+    class RemoveRange : Tests
+    {
+        [Test]
+        public void TestIfListIsNull()
+        {
+            Assert.Throws<IndexOutOfRangeException>(() => _arraylist.RemoveRange([1, 3]));
+        }
+
+        [Test]
+        public void TestOneIndexIsOutOfRange()
+        {
+            _arraylist.Add(1);
+            _arraylist.Add(2);
+            _arraylist.Add(3);
+            _arraylist.Add(4);
+            
+            Assert.Throws<IndexOutOfRangeException>(() => _arraylist.RemoveRange([2, 5]));
+        }
+        
+        [Test]
+        public void TestRemoveFirstThreeNumbers()
+        {
+            _arraylist.Add(1);
+            _arraylist.Add(2);
+            _arraylist.Add(3);
+            _arraylist.Add(4);
+            _arraylist.Add(5);
+            _arraylist.Add(6);
+
+            _arraylist.RemoveRange([1,3]);
+            
+            Assert.That(_arraylist.Get(0), Is.EqualTo(4));
+        }
+        
+
+    }
 }

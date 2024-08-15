@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "qiHkS6mUMEjekddMIRhy+tzcbfJmKONT+hRpVJTg2mr5UqVlr7gbzerHCWFAbSW4StEu+520yQZKWrS4zRnwuA==",
+  "dgSpecHash": "nh7J8856mdNqgaUsuAjk6zFiHEC4wQ11aWg75DeuwZPKZflOgKnOQIW0avmI5aUXrEyfLjJwrWlgjUkHUjzYQw==",
   "success": true,
-  "projectFilePath": "/Library/Repos/TimsArrayProject/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
+  "projectFilePath": "/Library/Repos/CustomArray/CustomArrayUnitTest/CustomArrayUnitTest.csproj",
   "expectedPackageFiles": [
-    "/Users/felix.langstengel/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/nunit/3.14.0/nunit.3.14.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/nunit.analyzers/3.9.0/nunit.analyzers.3.9.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512",
-    "/Users/felix.langstengel/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+    "/Users/tim.rosenbach/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/nunit/3.14.0/nunit.3.14.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/nunit.analyzers/3.9.0/nunit.analyzers.3.9.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512",
+    "/Users/tim.rosenbach/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []
 }

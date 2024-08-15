@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lL7YxK0Eg2N6RUkaUu1wH9RQehoS1O/ND6Lj2sNVAIlfXOrq8RSOnFSaXcIz0hLSevGIBtE24sdNJOeoDJ8UMA==",
+  "dgSpecHash": "XHvjbMJo3XrpzwvgulxX/72qTPpkSz/BXNA9t12+PCw4JsSPY39cPcrMaa8BTKaFdoLsHt9fvkyE10nwntgaPQ==",
   "success": true,
-  "projectFilePath": "/Library/Repos/TimsArrayProject/CustomArrayProgram/CustomArrayProgram.csproj",
+  "projectFilePath": "/Library/Repos/CustomArray/CustomArrayProgram/CustomArrayProgram.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

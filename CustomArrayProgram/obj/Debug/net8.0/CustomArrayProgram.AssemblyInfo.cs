@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomArrayProgram")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97389e753bee0151644aa12bafe461850eaa6875")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6accb7e6b7507c964d9bb4fe2b138729c47a4935")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomArrayProgram")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomArrayProgram")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

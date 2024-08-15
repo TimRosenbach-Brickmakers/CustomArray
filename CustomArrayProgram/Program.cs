@@ -106,4 +106,10 @@ public class MyArrayList<T>
     {
         throw new NotImplementedException();
     }
+
+
+    public void RemoveRange(int[] i)
+    {
+        throw new NotImplementedException();
+    }
 }
