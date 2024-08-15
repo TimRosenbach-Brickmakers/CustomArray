@@ -63,7 +63,7 @@ public class MyArrayList<T>
 
     public class Node(T value)
     {
-        public T Value = value;
+        public readonly T Value = value;
         public Node? NextNode;
     }
 
@@ -118,9 +118,9 @@ public class MyArrayList<T>
         var length = 0;
         while (currentNode.NextNode != null)
         {
-			if (Object.Equals(node.NextNode.Value, value)) {
+			if (node.NextNode != null && Equals(node.NextNode.Value, value)) {
                 return length;
-			}        
+			}
             currentNode = currentNode.NextNode;
             length++;
         }
@@ -128,7 +128,7 @@ public class MyArrayList<T>
         return 0;
     }
 
-    public void RemoveRange(int[] i)
+    public void RemoveRange(int[] index)
     {
         throw new NotImplementedException();
     }
