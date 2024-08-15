@@ -1,6 +1,7 @@
 // See https://aka.ms/new-console-template for more information
 
 namespace CustomArray;
+
 internal class Program
 {
     public static void Main(string[] args)
@@ -142,6 +143,48 @@ public class MyArrayList<T>
 
     public void RemoveRange(int[] index)
     {
-        throw new NotImplementedException();
+        if (_entryNode == null)
+        {
+            throw new IndexOutOfRangeException();
+        }
+
+        for (int i = index[0]; i <= index[1]; i++)
+        {
+            RemoveByIndex(index[0]);
+        }
+    }
+
+    public void RemoveByIndex(int index)
+    {
+        if (_entryNode == null)
+        {
+            throw new IndexOutOfRangeException();
+        }
+
+        if (index == 0)
+        {
+            _entryNode = _entryNode.NextNode ?? null;
+        }
+        else
+        {
+            RemoveByIndex(index - 1, _entryNode);
+        }
+    }
+
+    private void RemoveByIndex(int index, Node node)
+    {
+        if (node.NextNode == null)
+        {
+            throw new IndexOutOfRangeException();
+        }
+
+        if (index == 0)
+        {
+            node.NextNode = node.NextNode.NextNode ?? null;
+        }
+        else
+        {
+            RemoveByIndex(index - 1, node.NextNode);
+        }
     }
 }
