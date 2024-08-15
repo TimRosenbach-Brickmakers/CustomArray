@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 namespace CustomArray;
 internal class Program
@@ -104,13 +104,20 @@ public class MyArrayList<T>
 
     public int FindIndex(int value)
     {
-        FindIndex(value, _entryNode);
-        return 0;
+        return FindIndex(value, _entryNode);
     }
 
-    private int FindIndex(int value, Node node)
+    private int FindIndex(int value, Node? node)
     {
         if (_entryNode == null)
+        {
+            return -1;
+        }
+        if (Equals(_entryNode.Value, value))
+        {
+            return 0;
+        }
+        if (!Equals(_entryNode.Value, value) && node?.NextNode == null)
         {
             return -1;
         }
@@ -118,14 +125,19 @@ public class MyArrayList<T>
         var length = 0;
         while (currentNode.NextNode != null)
         {
-			if (node.NextNode != null && Equals(node.NextNode.Value, value)) {
-                return length;
+			if (node?.NextNode != null && Equals(node.NextNode.Value, value)) {
+                return length+1;
 			}
             currentNode = currentNode.NextNode;
             length++;
         }
 
-        return 0;
+        if (Equals(currentNode.Value, value))
+        {
+            return length;
+        }
+
+        return -1;
     }
 
     public void RemoveRange(int[] index)
