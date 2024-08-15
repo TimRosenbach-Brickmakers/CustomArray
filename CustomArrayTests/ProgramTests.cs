@@ -179,8 +179,7 @@ public class ProgramTests
             _arraylist.Add(5);
             _arraylist.Add(6);
 
-            _arraylist.RemoveRange([1,3]);
-
+            _arraylist.RemoveRange([0,2]);
             Assert.That(_arraylist.Get(0), Is.EqualTo(4));
         }
     }
