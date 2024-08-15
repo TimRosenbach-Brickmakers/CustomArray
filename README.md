@@ -9,17 +9,19 @@ Dies ist ein .NET C# Projekt, das eine generische `MyArrayList<T>` implementiert
 Die `MyArrayList<T>` bietet aktuell folgende Funktionen:
 
 1. **Add(T item)**: Fügt ein Element zur Liste hinzu.
-2. **Delete(T item)**: Entfernt ein Element aus der Liste.
+2. **Remove(T item)**: Entfernt ein Element aus der Liste.
 3. **Count**: Gibt die Anzahl der Elemente in der Liste zurück.
+4. **Get(int index)**: Gibt das gewünschte Element aus der Liste wieder.
 
 
 ## Unit Tests
 
-Die Unit-Tests für dieses Projekt wurden mit **xUnit** erstellt. Die Tests decken die aktuellen Funktionen ab und überprüfen:
+Die Unit-Tests für dieses Projekt wurden mit **NUnit** erstellt. Die Tests decken die aktuellen Funktionen ab und überprüfen:
 
 - Das Hinzufügen von Elementen (`Add`).
-- Das Löschen von Elementen (`Delete`).
+- Das Löschen von Elementen (`Remove`).
 - Die korrekte Ermittlung der Anzahl (`Count`).
+- Das Korrekte zurúck geben des gewünschten Item (`Get`).
 
 ### Tests ausführen
 
@@ -34,7 +36,7 @@ dotnet test
 1. **Projekt klonen**:
 
 ```bash
-git clone https://github.com/dein-benutzername/MyArrayListProjekt.git
+git clone https://github.com/timrosenbach-brickmakers/MyArrayListProjekt.git
 ```
 
 2. **Zum Projektverzeichnis wechseln**:
@@ -66,5 +68,3 @@ Dieses Projekt wurde in Zusammenarbeit mit <a href="https://github.com/Felix-dev
 - Verbesserung der Performance der Liste.
 
 ---
-
-Viel Erfolg mit deinem Projekt!
