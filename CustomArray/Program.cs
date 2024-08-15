@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-namespace CustomArrayProgramm;
+namespace CustomArray;
 internal class Program
 {
     public static void Main(string[] args)
@@ -105,7 +105,7 @@ public class MyArrayList<T>
     public int FindIndex(int value)
     {
         FindIndex(value, _entryNode);
-
+        return 0;
     }
 
     private int FindIndex(int value, Node node)
@@ -118,12 +118,14 @@ public class MyArrayList<T>
         var length = 0;
         while (currentNode.NextNode != null)
         {
-			if (EqualityComparer<T>.Default.Equals(node.NextNode.Value, value)) {
+			if (Object.Equals(node.NextNode.Value, value)) {
                 return length;
 			}        
             currentNode = currentNode.NextNode;
             length++;
         }
+
+        return 0;
     }
 
     public void RemoveRange(int[] i)

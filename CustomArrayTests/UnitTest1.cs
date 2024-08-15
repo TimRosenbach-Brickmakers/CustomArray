@@ -1,12 +1,8 @@
-using CustomArrayProgramm;
+using CustomArray;
 
+namespace CustomArrayTests;
 
-
-namespace CustomArrayUnitTest;
-
-
-
-public class Tests
+public class ProgramTests
 {
     private MyArrayList<int> _arraylist = null!;
     
@@ -16,7 +12,7 @@ public class Tests
         _arraylist = new MyArrayList<int>();
     }
 
-    class Get : Tests
+    class Get : ProgramTests
     {
         [Test]
         public void TestGetFunction()
@@ -44,7 +40,7 @@ public class Tests
         }
     }
 
-    class Add : Tests
+    class Add : ProgramTests
     {
         [Test]
         public void TestIfAddAddsAValue()
@@ -72,7 +68,7 @@ public class Tests
         }
     }
 
-    class Remove : Tests
+    class Remove : ProgramTests
     {
         [Test]
         public void TestRemoveOfOneNode()
@@ -112,7 +108,7 @@ public class Tests
         }
     }
 
-    class FindIndex : Tests
+    class FindIndex : ProgramTests
     {
         [Test]
         public void ValueNotFound()
@@ -154,7 +150,7 @@ public class Tests
         }
     }
 
-    class RemoveRange : Tests
+    class RemoveRange : ProgramTests
     {
         [Test]
         public void TestIfListIsNull()
@@ -187,7 +183,5 @@ public class Tests
             
             Assert.That(_arraylist.Get(0), Is.EqualTo(4));
         }
-        
-
     }
 }

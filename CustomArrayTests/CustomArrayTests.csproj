@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CustomArrayProgram\CustomArrayProgram.csproj" />
+      <ProjectReference Include="..\CustomArray\CustomArray.csproj" />
     </ItemGroup>
 
 </Project>
