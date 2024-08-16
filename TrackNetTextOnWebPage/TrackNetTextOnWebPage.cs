@@ -11,7 +11,7 @@ internal class TrackNetTextOnWebPage
     {
         var httpReader = new HttpReaderClass();
         var amount = 0;
-        string[] urls = new[]
+        var urls = new[]
         {
             "https://learn.microsoft.com",
             "https://learn.microsoft.com/aspnet/core",
