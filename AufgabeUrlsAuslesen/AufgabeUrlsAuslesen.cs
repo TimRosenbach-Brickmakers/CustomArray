@@ -21,7 +21,7 @@ public class HttpReaderClass
 {
     private readonly HttpClient _client = new();
 
-    private string[] _urls = new[]
+    private readonly string[] _urls = new[]
     {
         "https://learn.microsoft.com",
         "https://learn.microsoft.com/aspnet/core",
