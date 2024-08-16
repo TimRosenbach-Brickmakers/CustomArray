@@ -1,4 +1,4 @@
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
@@ -40,10 +40,9 @@ internal static class TrackNetTextOnWebPage
             var count = await httpReader.ProcessRepositoriesAsync(url);
             amount += count;
         }
+
         Console.WriteLine("Es wurde instgesamt " + amount + " mal .NET gefunden");
-
     }
-
 }
 
 public class HttpReaderClass
@@ -76,8 +75,7 @@ public class HttpReaderClass
     public int CountNetOnPage(string page, string url)
     {
         var resultOfCounting = Regex.Matches(page, ".NET").Count;
-        Console.WriteLine(url + " : " + resultOfCounting );
+        Console.WriteLine(url + " : " + resultOfCounting);
         return resultOfCounting;
     }
 }
-

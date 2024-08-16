@@ -18,7 +18,6 @@ public class Tests
         [Test]
         public void TestNoRespons()
         {
-
         }
     }
 
@@ -39,9 +38,5 @@ public class Tests
             var result = _httpClient.CountNetOnPage(page, "https://test.com");
             Assert.That(result, Is.EqualTo(expectedValue));
         }
-
-
-
     }
-
 }
