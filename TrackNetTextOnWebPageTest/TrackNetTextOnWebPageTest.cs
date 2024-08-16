@@ -24,15 +24,24 @@ public class Tests
 
     public class Count : Tests
     {
-        [Test]
-        public void Counting()
-        {
-            var testPageString = ".NET test .NET";
-            var expectedValue = 2;
-            var result = _httpClient.CountNetOnPage(testPageString, "https://test.com");
+        const string StringWithZeroDotNets = "<h1> hallo ich bin tim  </h1>";
+        const string StringWithThreeDotNets = "<h1> .NET hallo ich bin tim .NET </h1>.NET";
+        const string StringWithFourDotNets = "<h1> .NET hallo.NET ich bin tim .NET </h1>.NET";
+        const string StringWithThreeDotNetsAndOneWrong = "<h1> .NET hallo./ET ich bin tim .NET </h1>.NET";
 
+        [Test]
+        [TestCase(StringWithZeroDotNets, 0)]
+        [TestCase(StringWithThreeDotNets, 3)]
+        [TestCase(StringWithFourDotNets, 4)]
+        [TestCase(StringWithThreeDotNetsAndOneWrong, 3)]
+        public void CountingOneLink(string page, int expectedValue)
+        {
+            var result = _httpClient.CountNetOnPage(page, "https://test.com");
             Assert.That(result, Is.EqualTo(expectedValue));
         }
+
+
+
     }
 
 }
