@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
@@ -75,9 +75,9 @@ public class HttpReaderClass
 
     public int CountNetOnPage(string page, string url)
     {
-        var resultOfOCuting = Regex.Matches(page, ".NET").Count;
-        Console.WriteLine(url + " : " + resultOfOCuting );
-        return resultOfOCuting;
+        var resultOfCounting = Regex.Matches(page, ".NET").Count;
+        Console.WriteLine(url + " : " + resultOfCounting );
+        return resultOfCounting;
     }
 }
 
