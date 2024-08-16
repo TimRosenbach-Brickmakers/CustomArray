@@ -10,6 +10,7 @@ internal class TrackNetTextOnWebPage
     public static async Task Main(string[] args)
     {
         var httpReader = new HttpReaderClass();
+        var amount = 0;
         string[] urls = new[]
         {
             "https://learn.microsoft.com",
@@ -36,8 +37,10 @@ internal class TrackNetTextOnWebPage
 
         foreach (var url in urls)
         {
-            await httpReader.ProcessRepositoriesAsync(url);
+            var count = await httpReader.ProcessRepositoriesAsync(url);
+            amount += count;
         }
+        Console.WriteLine("Es wurde instgesamt " + amount + " mal .NET gefunden");
 
     }
 
@@ -54,18 +57,20 @@ public class HttpReaderClass
         _client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
     }
 
-    public async Task ProcessRepositoriesAsync(string url)
+    public async Task<int> ProcessRepositoriesAsync(string url)
     {
         try
         {
             var json = await _client.GetStringAsync(url);
-            CountNetOnPage(json, url);
+            return CountNetOnPage(json, url);
         }
         catch (Exception e)
         {
             var json = "Url not working: " + url;
             Console.WriteLine(json);
         }
+
+        return 0;
     }
 
     public int CountNetOnPage(string page, string url)
