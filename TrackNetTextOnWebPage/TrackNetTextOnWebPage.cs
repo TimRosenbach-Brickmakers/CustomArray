@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace TrackNetTextOnWebPage;
 
-internal class TrackNetTextOnWebPage
+internal static class TrackNetTextOnWebPage
 {
     public static async Task Main(string[] args)
     {
