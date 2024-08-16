@@ -7,9 +7,10 @@ namespace TrackNetTextOnWebPage;
 
 internal class TrackNetTextOnWebPage
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        object data = new object[]
+        var httpReader = new HttpReaderClass();
+        string[] urls = new[]
         {
             "https://learn.microsoft.com",
             "https://learn.microsoft.com/aspnet/core",
@@ -32,45 +33,46 @@ internal class TrackNetTextOnWebPage
             "https://learn.microsoft.com/windows",
             "https://learn.microsoft.com/maui"
         };
-        var webload = new Thread(new ParameterizedThreadStart(GetHtmlFile!));
-        webload.Start(data);
-        Thread.Sleep(5000);
-    }
-    private static async void GetHtmlFile(object data)
-    {
-        Array? urls;
-        urls = (Array)data;
-
-        using HttpClient client = new();
-        client.DefaultRequestHeaders.Accept.Clear();
-        client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-        client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
         foreach (var url in urls)
         {
-            var s = url.ToString();
-            try
-            {
-                await ProcessRepositoriesAsync(client, s);
-            }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            await httpReader.ProcessRepositoriesAsync(url);
         }
 
     }
-    private static async Task ProcessRepositoriesAsync(HttpClient client, string? url)
+
+}
+
+public class HttpReaderClass
+{
+    private readonly HttpClient _client = new();
+
+    public HttpReaderClass()
     {
-        var json = await client.GetStringAsync(url);
-        CountNetOnPage(json);
+        _client.DefaultRequestHeaders.Accept.Clear();
+        _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+        _client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
     }
-    private static void CountNetOnPage(string page)
+
+    public async Task ProcessRepositoriesAsync(string url)
+    {
+        try
+        {
+            var json = await _client.GetStringAsync(url);
+            CountNetOnPage(json, url);
+        }
+        catch (Exception e)
+        {
+            var json = "Url not working: " + url;
+            Console.WriteLine(json);
+        }
+    }
+
+    public int CountNetOnPage(string page, string url)
     {
         var resultOfOCuting = Regex.Matches(page, ".NET").Count;
-        Console.WriteLine(resultOfOCuting);
+        Console.WriteLine(url + " : " + resultOfOCuting );
+        return resultOfOCuting;
     }
 }
 
