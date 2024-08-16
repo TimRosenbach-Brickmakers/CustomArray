@@ -9,7 +9,7 @@ internal static class TrackNetTextOnWebPage
 {
     public static async Task Main(string[] args)
     {
-        var httpReader = new HttpReaderClass();
+        var httpReader = new HttpReaderClass(new HttpClient());
         var amount = 0;
         var urls = new[]
         {
@@ -47,10 +47,11 @@ internal static class TrackNetTextOnWebPage
 
 public class HttpReaderClass
 {
-    private readonly HttpClient _client = new();
+    private readonly HttpClient _client;
 
-    public HttpReaderClass()
+    public HttpReaderClass(HttpClient client)
     {
+        _client = client;
         _client.DefaultRequestHeaders.Accept.Clear();
         _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
         _client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
@@ -74,7 +75,7 @@ public class HttpReaderClass
 
     public int CountNetOnPage(string page, string url)
     {
-        var resultOfCounting = Regex.Matches(page, ".NET").Count;
+        var resultOfCounting = Regex.Matches(page, @"(?<!['""])\.NET(?!['""])").Count;
         Console.WriteLine(url + " : " + resultOfCounting);
         return resultOfCounting;
     }
