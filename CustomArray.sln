@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AufgabeUrlsAuslesen", "Aufg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackNetTextOnWebPage", "TrackNetTextOnWebPage\TrackNetTextOnWebPage.csproj", "{5000B8F5-A5B0-4A10-A407-1391481F616C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackNetTextOnWebPageTest", "TrackNetTextOnWebPageTest\TrackNetTextOnWebPageTest.csproj", "{034E4603-D5F4-40D0-B5C1-7E5567E015FC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AufgabeUrlsAuslesenTests", "AufgabeUrlsAuslesenTests\AufgabeUrlsAuslesenTests.csproj", "{99E8FF7A-70C1-4619-948B-C7FECE97F638}"
 EndProject
 Global
@@ -32,6 +34,10 @@ Global
 		{5000B8F5-A5B0-4A10-A407-1391481F616C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5000B8F5-A5B0-4A10-A407-1391481F616C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5000B8F5-A5B0-4A10-A407-1391481F616C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034E4603-D5F4-40D0-B5C1-7E5567E015FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034E4603-D5F4-40D0-B5C1-7E5567E015FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034E4603-D5F4-40D0-B5C1-7E5567E015FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034E4603-D5F4-40D0-B5C1-7E5567E015FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99E8FF7A-70C1-4619-948B-C7FECE97F638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99E8FF7A-70C1-4619-948B-C7FECE97F638}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E8FF7A-70C1-4619-948B-C7FECE97F638}.Release|Any CPU.ActiveCfg = Release|Any CPU
