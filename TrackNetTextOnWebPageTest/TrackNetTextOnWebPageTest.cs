@@ -5,12 +5,12 @@ namespace TrackNetTextOnWebPageTest;
 
 public class Tests
 {
-    private HttpReader _httpReader;
+    private HttpReaderClass _httpClient;
 
     [SetUp]
     public void Setup()
     {
-        _httpReader = new HttpReader();
+        _httpClient = new HttpReaderClass();
     }
 
     public class GetPage : Tests
@@ -29,7 +29,7 @@ public class Tests
         {
             var testPageString = ".NET test .NET";
             var expectedValue = 2;
-            var result = _httpReader.CountNetOnPage(testPageString);
+            var result = _httpClient.CountNetOnPage(testPageString, "https://test.com");
 
             Assert.That(result, Is.EqualTo(expectedValue));
         }
